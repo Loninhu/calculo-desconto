@@ -1,0 +1,22 @@
+:source-highlighter: highlightjs
+:unsafe:
+
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+
+== Respostas
+
+1. Qual padrão de projeto pode ser utilizado no desenvolvimento de uma solução?
+-    O padrão mais adequado seria o Strategy, já que ele permite criar vários algorítmos para cada forma de calcular os descontos, e os torná-los intercambiavéis, permitindo que o cálculo do desconto seja alterado em tempo de execução.
+2. Como poderíamos implementar estes tipos de desconto sem utilizar Padrões de Projetos?
+-    Sem padrões de projeto, seria possível criar uma única função que verifica o tipo de desconto e aplica a lógica de cada tipo de desconto diretamente, em que o tipo de desconto poderia ser definido por um parâmetro que o usuário escolhe.
+3. Quais os problemas que tal implementação traria?
+-    O código fica mais acoplado e menos modular, quebrando princípios de padrões de projeto como o OCP e SRP, tornando mais difícil de manter conforme novas regras para calculo de descontos sejam adicionadas no sistema
+
