@@ -10,27 +10,16 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-= Cálculo de Descontos
 
-Considere que temos um sistema de vendas onde diferentes formas de desconto podem ser implementadas de acordo com as promoções vigentes, como em datas comemorativas. O sistema deve permitir o cálculo do desconto sobre a venda das seguintes maneiras:
-
-- percentual de desconto definido (que pode vir de um banco de dados);
-- percentual de desconto progressivo: `valor da compra/25`, não podendo ultrapassar 20% (este são apenas valores arbitrários de exemplo);
-- desconto de 15% na data de aniversário do cliente.
-
-O usuário é quem escolhe o tipo de desconto a ser aplicado, não o programa.
-O programa deve apenas permitir que seja mudado o algoritmo de cálculo do desconto.
-
-== Responda
+== Respostas
 
 1. Qual padrão de projeto pode ser utilizado no desenvolvimento de uma solução?
-    O padrão mais adequado seria o Strategy, já que ele permite criar vários algorítmos para cada forma de calcular os descontos, e os
-    torná-los intercambiavéis, permitindo que o cálculo do desconto seja alterado em tempo de execução.
+-    O padrão mais adequado seria o Strategy, já que ele permite criar vários algorítmos para cada forma de calcular os descontos, e os
+-    torná-los intercambiavéis, permitindo que o cálculo do desconto seja alterado em tempo de execução.
 2. Como poderíamos implementar estes tipos de desconto sem utilizar Padrões de Projetos?
-    Sem padrões de projeto, seria possível criar uma única função que verifica o tipo de desconto e aplica a lógica de cada
-    tipo de desconto diretamente, em que o tipo de desconto poderia ser definido por um parâmetro que o usuário escolhe.
+-    Sem padrões de projeto, seria possível criar uma única função que verifica o tipo de desconto e aplica a lógica de cada
+-    tipo de desconto diretamente, em que o tipo de desconto poderia ser definido por um parâmetro que o usuário escolhe.
 3. Quais os problemas que tal implementação traria?
-    O código fica mais acoplado e menos modular, quebrando princípios de padrões de projeto como o OCP e SRP, tornando mais
-    difícil de manter conforme novas regras para calculo de descontos sejam adicionadas no sistema
-4. Implemente o projeto e envie o link para repositório no GitHub, onde o README deve conter as respostas.
+-    O código fica mais acoplado e menos modular, quebrando princípios de padrões de projeto como o OCP e SRP, tornando mais
+-    difícil de manter conforme novas regras para calculo de descontos sejam adicionadas no sistema
 
